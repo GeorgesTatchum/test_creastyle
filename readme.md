@@ -13,8 +13,9 @@ Cette API permet de gérer une liste de contacts avec des fonctionnalités CRUD 
 1. Clonez ce dépôt :
 
 ```bash
-   git clone <url_du_dépôt>
-   cd <nom_du_dépôt>
+   git clone https://github.com/GeorgesTatchum/test_creastyle.git
+   cd test_creastyle
+
 ```
 
 Installez les dépendances :
