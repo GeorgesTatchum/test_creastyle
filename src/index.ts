@@ -6,12 +6,11 @@ import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import { error } from "console";
 import router from './routes'
 
 dotenv.config();
 
-const app: Express = express();
+export const app: Express = express();
 const PORT = process.env.PORT;
 const MONGO_URL = `mongodb+srv://${process.env.MONGO_DB_USER_NAME}:${process.env.MONGO_DB_PASSWORD}@cluster0.dkjxu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
@@ -32,7 +31,7 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL)
 mongoose.connection.on('error', (err) => {
-  console.log(error);
+  console.log(err);
 })
 
 const server = http.createServer(app);
