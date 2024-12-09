@@ -1,0 +1,9 @@
+{
+  "watch": [
+    "src/**/*"
+  ],
+  "extensions": [
+    ".ts, .js"
+  ],
+  "exec": "ts-node ./src/index.ts"
+}
